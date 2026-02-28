@@ -11,11 +11,10 @@ struct NavItem: Identifiable, Equatable {
 
 extension NavItem {
     static let defaults: [NavItem] = [
-        NavItem(title: "Home",      icon: "house.fill"),
-        NavItem(title: "Search",    icon: "magnifyingglass"),
-        NavItem(title: "Notes",     icon: "note.text"),
-        NavItem(title: "Calendar",  icon: "calendar"),
-        NavItem(title: "Reminders", icon: "bell.fill", badge: 3),
-        NavItem(title: "Settings",  icon: "gearshape.fill"),
+        NavItem(title: "Todo",           icon: "checklist"),
+        NavItem(title: "Pomodoro",       icon: "timer"),
+        NavItem(title: "Active Recall",  icon: "brain.head.profile"),
+        NavItem(title: "Flash Card",     icon: "rectangle.on.rectangle"),
+        NavItem(title: "Exam Simulator", icon: "doc.text.magnifyingglass"),
     ]
 }
