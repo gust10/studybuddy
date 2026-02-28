@@ -72,7 +72,14 @@ struct ContentView: View {
                             isExpanded: isExpanded,
                             isSelected: selectedID == item.id
                         ) {
-                            selectedID = item.id
+                            let wasSelected = selectedID == item.id
+                            selectedID = wasSelected ? nil : item.id
+                            // Toggle content panel off if same item tapped twice
+                            let title: String? = wasSelected ? nil : item.title
+                            NotificationCenter.default.post(
+                                name: .navItemSelected,
+                                object: title
+                            )
                         }
                     }
                 }
